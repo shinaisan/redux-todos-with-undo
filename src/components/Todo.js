@@ -1,15 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {
+  ListGroupItem
+} from 'react-bootstrap';
 
 const Todo = ({ onClick, completed, text }) => (
-  <li
+  <ListGroupItem
     onClick={onClick}
     style={{
       textDecoration: completed ? 'line-through' : 'none'
     }}
+    disabled={completed}
   >
     {text}
-  </li>
+  </ListGroupItem>
 )
 
 Todo.propTypes = {

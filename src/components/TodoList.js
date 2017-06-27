@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './Todo'
+import {
+  ListGroup
+} from 'react-bootstrap';
 
 const TodoList = ({ todos, onTodoClick }) => (
-  <ul>
+  <ListGroup>
     {todos.map(todo =>
       <Todo
         key={todo.id}
@@ -11,7 +14,7 @@ const TodoList = ({ todos, onTodoClick }) => (
         onClick={() => onTodoClick(todo.id)}
       />
     )}
-  </ul>
+  </ListGroup>
 )
 
 TodoList.propTypes = {

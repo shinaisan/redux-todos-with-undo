@@ -1,15 +1,18 @@
 import React from 'react'
 import { ActionCreators as UndoActionCreators } from 'redux-undo'
 import { connect } from 'react-redux'
+import {
+  Button
+} from 'react-bootstrap';
 
 let UndoRedo = ({ canUndo, canRedo, onUndo, onRedo }) => (
   <p>
-    <button onClick={onUndo} disabled={!canUndo}>
+    <Button onClick={onUndo} disabled={!canUndo}>
       Undo
-    </button>
-    <button onClick={onRedo} disabled={!canRedo}>
+    </Button>
+    <Button onClick={onRedo} disabled={!canRedo}>
       Redo
-    </button>
+    </Button>
   </p>
 )
 
